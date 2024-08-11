@@ -1,0 +1,44 @@
+.fooder {
+    padding: 30px 0;
+    height: 220px;
+    background: url(../img/bottom.png);
+    background-size: 100% 100%;
+    color: #fff;
+}
+
+.fooder ul {
+    padding: 0;
+}
+
+.fooder .contact-us {
+    float: left;
+}
+
+.fooder .friendly-link {
+    float: right;
+}
+
+.fooder .friendly-link p {
+    margin-left: 50px;
+}
+
+.fooder .friendly-link ul {
+    margin-left: 50px;
+    float: left;
+}
+
+.fooder .title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.fooder li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.fooder li:hover {
+    color: #f18519;
+}
