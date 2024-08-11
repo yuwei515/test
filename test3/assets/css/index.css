@@ -1,0 +1,133 @@
+#box {
+    /* 动画属性 动画名称 动画的时间函数(匀速) 无限循环 */
+    /* 兼容不同浏览器 */
+-moz-animation: box 5s linear infinite;
+		-webkit-animation: box 5s linear infinite;
+		-ms-animation: box 5s linear infinite;
+		animation: box 5s linear infinite;
+ 
+
+/* 动画进行时背面的内容不显示 */
+        -moz-backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		-ms-backface-visibility: hidden;
+		backface-visibility: hidden;
+
+
+        /* 3D 优化加速 提升性能 */
+        -moz-transform: translate3d(0,0,0);
+		-webkit-transform: translate3d(0,0,0);
+		-ms-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+
+
+        /* 背景配置  位置配置*/
+        /* background: #348cb2 url("images/bg.jpg") bottom left; */
+        /* background: #348cb2 url("https://img2.baidu.com/it/u=1278638859,2741001157&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=281") bottom left; */
+    background: url("https://img2.baidu.com/it/u=1278638859,2741001157&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=281");
+		background-repeat: repeat-x;
+		height: 100%;
+        /* 定位 */
+		left: 0;
+        /* 不透明 */
+		opacity: 1;
+        /* 固定在视口，滚动时不滚动 */
+		position: fixed;
+		top: 0;
+}
+
+/* 以下是定义动画 box  每个定义为兼容不同的浏览器 
+    关键帧定义了刚刚开始和结束时候的状态，刚刚开始为原始位置，结束时元素向左偏移2250px
+*/
+/* Firefox(火狐浏览器) 定义动画 box */
+	@-moz-keyframes box {
+		0% {
+			-moz-transform: translate3d(0,0,0);
+			-webkit-transform: translate3d(0,0,0);
+			-ms-transform: translate3d(0,0,0);
+			transform: translate3d(0,0,0);
+		}
+
+		100% {
+			-moz-transform: translate3d(-2250px,0,0);
+			-webkit-transform: translate3d(-2250px,0,0);
+			-ms-transform: translate3d(-2250px,0,0);
+			transform: translate3d(-2250px,0,0);
+		}
+	}
+
+
+/* WebKit (谷歌、苹果浏览器...) 定义动画 box */
+	@-webkit-keyframes box {
+		0% {
+			-moz-transform: translate3d(0,0,0);
+			-webkit-transform: translate3d(0,0,0);
+			-ms-transform: translate3d(0,0,0);
+			transform: translate3d(0,0,0);
+		}
+
+		100% {
+			-moz-transform: translate3d(-2250px,0,0);
+			-webkit-transform: translate3d(-2250px,0,0);
+			-ms-transform: translate3d(-2250px,0,0);
+			transform: translate3d(-2250px,0,0);
+		}
+	}
+
+/*  Internet Explorer (window自带的浏览器) 定义动画 box */
+	@-ms-keyframes box {
+		0% {
+			-moz-transform: translate3d(0,0,0);
+			-webkit-transform: translate3d(0,0,0);
+			-ms-transform: translate3d(0,0,0);
+			transform: translate3d(0,0,0);
+		}
+
+		100% {
+			-moz-transform: translate3d(-2250px,0,0);
+			-webkit-transform: translate3d(-2250px,0,0);
+			-ms-transform: translate3d(-2250px,0,0);
+			transform: translate3d(-2250px,0,0);
+		}
+	}
+
+
+    /* 定义标准的动画 box 兼容很多浏览器*/
+	@keyframes box {
+		0% {
+			-moz-transform: translate3d(0,0,0);
+			-webkit-transform: translate3d(0,0,0);
+			-ms-transform: translate3d(0,0,0);
+			transform: translate3d(0,0,0);
+		}
+
+		100% {
+			-moz-transform: translate3d(-2250px,0,0);
+			-webkit-transform: translate3d(-2250px,0,0);
+			-ms-transform: translate3d(-2250px,0,0);
+			transform: translate3d(-2250px,0,0);
+		}
+	}
+
+
+
+
+
+/* 后续样式 配合动画效果设置宽度*/
+#box {
+		/* background-size: 2250px auto; */
+		background-size: 2250px 80%;
+		width: 6750px;
+	}
+
+
+    p{
+        top: 0;
+        /* bottom: 100px; */
+        left: 50%;
+        font-size: 30px;
+        font-weight: 700;
+        z-index: 9999;
+        opacity: 1;
+        color: red;
+    }
