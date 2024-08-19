@@ -3,3 +3,4 @@
 
 <a href="https://yuwei515.github.io/test/school/1/#">school</a>
 <a href="https://yuwei515.github.io/test/test3/">test</a>
+<a href="https://yuwei515.github.io/index2/">test2</a>
